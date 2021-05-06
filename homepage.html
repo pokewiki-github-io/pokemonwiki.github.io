@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>POKEWIKI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+        <body>
+            <header>
+                <div class="main">
+                    <div class="logo">
+                        <img src="LogoMakr-23CdRh.png">
+                    </div>
+                    <ul>
+                        <li class="present"><a href="#">Home</a></li>
+                        <li><a href="#">Pokemons</a></li>
+                        <li><a href="#">Pokemon Trainers</a></li>
+                        <li><a href="#">Leagues</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="C:\xampp\htdocs\feedbackform.php">Feedback</a></li>
+                    </ul>
+                </div>
+            </header>
+            
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="pikachu.jpg" style="width:100%">
+                  <div class="text">PIKACHU</div>
+                  
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="Bulbasaur.png" style="width:100%">
+                  <div class="text">BULBASAUR</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="charmander.jpg" style="width:100%">
+                  <div class="text">CHARMANDER</div>
+                </div>
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="squartle.jpg" style="width:100%">
+                  <div class="text">SQUIRTLE</div>
+                </div>
+                <div class="dots">
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span>
+                </div>
+                </div>
+               
+                </div>
+                <br>
+                
+                
+                
+                <script>
+                var slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }
+                </script>
+                <div class="paragraph">
+                  <h1>POKÉWIKI</h1>
+                  <li>
+                    Pokéwiki is a website that has all information about Pokémons, Pokémon Trainers, Leagues etc 
+                  </li>
+                </div>
+        </body>
+</html>
